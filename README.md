@@ -86,4 +86,50 @@ node "D:\nodejs\nodered\node_modules\node-red\red.js" -u "D:\nodejs\nodered\work
 #### Bước 1: Vô hiệu hóa IIS đang chạy
 - Phải vô hiệu hóa IIS (hoặc ít nhất là dừng nó tạm thời) khi cài đặt Apache vì hai dịch vụ này tranh chấp cùng cổng (80/443), khiến Apache không thể khởi động hoặc hoạt động ổn định
 - Mở CMD với quyền Admin và chạy lệnh iisreset /stop
-#### Bước 2: Tải xuống Apache Web Server, giải nén và cài đặt trên ổ D
+<img width="1806" height="153" alt="Screenshot 2025-10-25 092240" src="https://github.com/user-attachments/assets/6661162b-8fa6-4b05-8279-84855aa1a7bc" />
+
+#### Bước 2: Tải xuống Apache Web Server, giải nén trên ổ D
+- Truy cập link https://www.apachelounge.com/download/ để tải Apache về máy.
+- Sau khi tải xuống, giải nén vào thư mục D:\Apache\Apache24
+#### Bước 3: Cấu hình Apache
+Cấu hình các file:
+  + D:\Apache24\conf\httpd.conf
+  + D:\Apache24\conf\extra\httpd-vhosts.conf
+
+Để tạo website với domain: nguyentrunghieu.com
+##### Cấu hình file conf\httpd.conf:
+- Mở file sau đó thực hiện sửa đường dẫn đến thư mục vừa giải nén: "d:/Apache/Apache24"
+- Bỏ dấu # ở dòng LoadModule vhost_alias_module modules/mod_vhost_alias.so và Include conf/extra/httpd-vhosts.conf
+- Lưu file
+##### Cấu hình file conf\extra\httpd-vhosts.conf
+Trong thẻ <VirtualHost *:80>
+- Thay DocumentRoot bằng đường dẫn chứ thư mục web
+- Đổi tên ServerName
+
+```
+<VirtualHost *:80>
+    ServerAdmin webmaster@dummy-host.example.com
+    DocumentRoot "D:\Apache\Apache24\nguyentrunghieu"
+    ServerName nguyentrunghieu.com
+    ServerAlias www.dummy-host.example.com
+    ErrorLog "logs/dummy-host.example.com-error.log"
+    CustomLog "logs/dummy-host.example.com-access.log" common
+    <Directory "D:\Apache\Apache24\nguyentrunghieu">
+    	 Options Indexes FollowSymLinks
+   	 AllowOverride None
+   	 Require all granted
+    </Directory>
+</VirtualHost> 
+```
+##### Tạo một thư mục chứa website: D:\Apache\Apache24\nguyentrunghieu
+Tạo 1 file index.html trong thư mục nguyentrunghieu
+#### Bước 4: Fake IP cho domain
+- Mở file C:\WINDOWS\SYSTEM32\Drivers\etc\hosts bằng Notepad với quyền admin (chuột phải Notepad > Run as administrator, rồi mở file).
+- Thêm dòng cuối file: 127.0.0.1 nguyentrunghieu.com.
+- Ctrl + S để lưu file.
+#### Bước 5: Cài đặt và khởi động Apache
+Mở CMD quyền Administrator sau đó gõ lệnh:
+Lệnh cài đặt: D:\Apache\Apache24\bin\httpd.exe -k install
+Lệnh khởi động: D:\Apache\Apache24\bin\httpd.exe -k start
+<img width="1798" height="110" alt="image" src="https://github.com/user-attachments/assets/326ca30f-bd57-4df6-b4b0-c9b28dad287a" />
+<img width="1808" height="44" alt="image" src="https://github.com/user-attachments/assets/b293be4f-146b-4ce5-bbfe-03d286740656" />
