@@ -165,7 +165,7 @@ node "D:\nodejs\nodered\node_modules\node-red\red.js" -u "D:\nodejs\nodered\work
 - Chạy: ```nssm start a1-nodered```
 <img width="1795" height="246" alt="image" src="https://github.com/user-attachments/assets/060412ce-1f71-4b16-9e47-be4207a7bf39" />
 
-Sau khi chạy thành công, Node-Red sẽ hoạt động ở ```http://localhost:1880```
+- Sau khi chạy thành công, Node-Red sẽ hoạt động ở ```http://localhost:1880```
 <img width="3071" height="1749" alt="image" src="https://github.com/user-attachments/assets/d6913733-86fa-4ac5-90fd-8bf0608fac2e" />
 
-#### 
+### 2.3. Tạo CSDL
