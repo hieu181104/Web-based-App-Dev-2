@@ -169,3 +169,29 @@ node "D:\nodejs\nodered\node_modules\node-red\red.js" -u "D:\nodejs\nodered\work
 <img width="3071" height="1749" alt="image" src="https://github.com/user-attachments/assets/d6913733-86fa-4ac5-90fd-8bf0608fac2e" />
 
 ### 2.3. Tạo CSDL
+- Thiết kế cơ sở dữ liệu chứa các thông tin về các sản phẩm trong một web bán sách.
+- Database name: Book_Sale
+- Port: 1433
+- Username: sa
+- Table name: Books
+- Server name: DELL-INS16PLUS
+#### Bảng dữ liệu:
+<img width="1499" height="510" alt="image" src="https://github.com/user-attachments/assets/94d8c8ba-6cbb-4a1f-ab6c-d238d7ac6ea1" />
+
+#### Dữ liệu demo:
+<img width="2405" height="267" alt="image" src="https://github.com/user-attachments/assets/3cbba10b-8219-422c-b32e-c69d85c2ad6d" />
+
+### 2.4. Cài đặt thư viện trên Notered
+- Mở NOTERED bằng url trên trình duyệt: localhost:1880
+- Chọn Manage Palette rồi chọn Install
+- Cài đặt các thư viện:
+```
+node-red-contrib-mssql-plus
+node-red-node-mysql
+node-red-contrib-telegrambot
+node-red-contrib-moment
+node-red-contrib-influxdb
+node-red-contrib-duckdns
+node-red-contrib-cron-plus
+```
+<img width="1407" height="1500" alt="image" src="https://github.com/user-attachments/assets/abafc95e-e6a0-4887-9203-ecdcb1e7fe69" />
