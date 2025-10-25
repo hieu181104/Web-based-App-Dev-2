@@ -143,9 +143,23 @@ Mở CMD quyền Administrator sau đó gõ lệnh:
 - download file `https://nodejs.org/dist/v20.19.5/node-v20.19.5-x64.msi`
 - cài đặt vào thư mục `D:\nodejs`
 #### Bước 2: Cài đặt Nodered
-Mở cmd, vào thư mục D:\nodejs, chạy lệnh npm install -g --unsafe-perm node-red --prefix "D:\nodejs\nodered" để cài đặt Nodered
+Mở cmd, vào thư mục ```D:\nodejs```, chạy lệnh ```npm install -g --unsafe-perm node-red --prefix "D:\nodejs\nodered"``` để cài đặt Nodered
 <img width="1789" height="280" alt="image" src="https://github.com/user-attachments/assets/3079137d-72d7-4b00-b36f-7a2d7ad7e30c" />
 
 #### Bước 3: Cài đặt NSSM
 - Truy cập link: https://nssm.cc/release/nssm-2.24.zip để tải về.Sau đó giải nén thu được file nssm.exe
 - Copy file nssm.exe vào thư mục ```D:\nodejs\nodered```
+- Tạo file cmd: D:\nodejs\nodered\run-nodered.cmd bằng Notepad với nội dung:
+```
+@echo off
+REM fix path
+set PATH=D:\nodejs;%PATH%
+REM Run Node-RED
+node "D:\nodejs\nodered\node_modules\node-red\red.js" -u "D:\nodejs\nodered\work" %*
+```
+<img width="2459" height="795" alt="image" src="https://github.com/user-attachments/assets/e1a413ad-eae1-4fd5-8135-6527c06ede7d" />
+
+#### Bước 4: Chạy service
+- Mở cmd với quyền Administrator, chuyển đến: ```cd D:\nodejs\nodered```
+- Chạy: ```nssm.exe install a1-nodered "D:\nodejs\nodered\run-nodered.cmd"```
+- Chạy: ```nssm start a1-nodered```
