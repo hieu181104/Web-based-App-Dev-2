@@ -198,4 +198,4 @@ node-red-contrib-cron-plus
 
 - Mở file cấu hình: ```D:\nodejs\nodered\work\settings.js```
 - Tìm phần adminAuth, uncomment (bỏ #) và sửa thành:
-- 
+
