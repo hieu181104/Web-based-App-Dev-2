@@ -129,7 +129,8 @@ Tạo 1 file index.html trong thư mục nguyentrunghieu
 - Ctrl + S để lưu file.
 #### Bước 5: Cài đặt và khởi động Apache
 Mở CMD quyền Administrator sau đó gõ lệnh:
-Lệnh cài đặt: D:\Apache\Apache24\bin\httpd.exe -k install
-Lệnh khởi động: D:\Apache\Apache24\bin\httpd.exe -k start
+- Lệnh cài đặt: D:\Apache\Apache24\bin\httpd.exe -k install
+- Lệnh khởi động: D:\Apache\Apache24\bin\httpd.exe -k start
+
 <img width="1798" height="110" alt="image" src="https://github.com/user-attachments/assets/326ca30f-bd57-4df6-b4b0-c9b28dad287a" />
 <img width="1808" height="44" alt="image" src="https://github.com/user-attachments/assets/b293be4f-146b-4ce5-bbfe-03d286740656" />
