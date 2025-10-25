@@ -98,8 +98,8 @@ Cấu hình các file:
 
 Để tạo website với domain: nguyentrunghieu.com
 ##### Cấu hình file conf\httpd.conf:
-- Mở file sau đó thực hiện sửa đường dẫn đến thư mục vừa giải nén: "d:/Apache/Apache24"
-- Bỏ dấu # ở dòng LoadModule vhost_alias_module modules/mod_vhost_alias.so và Include conf/extra/httpd-vhosts.conf
+- Mở file sau đó thực hiện sửa đường dẫn đến thư mục vừa giải nén: ```d:/Apache/Apache24```
+- Bỏ dấu # ở dòng ```LoadModule vhost_alias_module modules/mod_vhost_alias.so``` và ```Include conf/extra/httpd-vhosts.conf```
 - Lưu file
 ##### Cấu hình file conf\extra\httpd-vhosts.conf
 Trong thẻ <VirtualHost *:80>
@@ -125,7 +125,7 @@ Trong thẻ <VirtualHost *:80>
 Tạo 1 file index.html trong thư mục nguyentrunghieu
 #### Bước 4: Fake IP cho domain
 - Mở file ```C:\WINDOWS\SYSTEM32\Drivers\etc\hosts``` bằng Notepad với quyền admin (chuột phải Notepad > Run as administrator, rồi mở file).
-- Thêm dòng cuối file: 127.0.0.1 nguyentrunghieu.com.
+- Thêm dòng cuối file: ```127.0.0.1 nguyentrunghieu.com```
 - Ctrl + S để lưu file.
 #### Bước 5: Cài đặt và khởi động Apache
 Mở CMD quyền Administrator sau đó gõ lệnh:
