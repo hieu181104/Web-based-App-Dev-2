@@ -82,3 +82,8 @@ node "D:\nodejs\nodered\node_modules\node-red\red.js" -u "D:\nodejs\nodered\work
 - đã hiểu cách sử dụng nodered để tạo api back-end như nào?
 - đã hiểu cách frond-end tương tác với back-end ra sao?
 ## BÀI LÀM
+### 2.1. Cài đặt Apache Web Server
+#### Bước 1: Vô hiệu hóa IIS đang chạy
+- Phải vô hiệu hóa IIS (hoặc ít nhất là dừng nó tạm thời) khi cài đặt Apache vì hai dịch vụ này tranh chấp cùng cổng (80/443), khiến Apache không thể khởi động hoặc hoạt động ổn định
+- Mở CMD với quyền Admin và chạy lệnh iisreset /stop
+#### Bước 2: Tải xuống Apache Web Server, giải nén và cài đặt trên ổ D
