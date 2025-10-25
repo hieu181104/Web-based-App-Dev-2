@@ -149,7 +149,7 @@ Mở cmd, vào thư mục ```D:\nodejs```, chạy lệnh ```npm install -g --uns
 #### Bước 3: Cài đặt NSSM
 - Truy cập link: https://nssm.cc/release/nssm-2.24.zip để tải về.Sau đó giải nén thu được file nssm.exe
 - Copy file nssm.exe vào thư mục ```D:\nodejs\nodered```
-- Tạo file cmd: D:\nodejs\nodered\run-nodered.cmd bằng Notepad với nội dung:
+- Tạo file cmd: ```D:\nodejs\nodered\run-nodered.cmd``` bằng Notepad với nội dung:
 ```
 @echo off
 REM fix path
