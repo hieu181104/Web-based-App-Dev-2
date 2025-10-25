@@ -197,5 +197,18 @@ node-red-contrib-cron-plus
 <img width="1407" height="1500" alt="image" src="https://github.com/user-attachments/assets/abafc95e-e6a0-4887-9203-ecdcb1e7fe69" />
 
 - Mở file cấu hình: ```D:\nodejs\nodered\work\settings.js```
-- Tìm phần adminAuth, uncomment (bỏ #) và sửa thành:
+- Tìm phần adminAuth, uncomment (bỏ //):
+<img width="1430" height="401" alt="image" src="https://github.com/user-attachments/assets/8bc8ea94-2f59-485a-8c77-cfcb9ef9588d" />
+
+- Sửa chuỗi mã hóa mật khẩu bằng chuỗi mới (chuỗi mã hóa mật khẩu có thể được thiết lập bằng tool ```https://tms.tnut.edu.vn/pw.php```) :
+<img width="1443" height="400" alt="image" src="https://github.com/user-attachments/assets/7a52f717-a6bd-46b9-a983-8ce93762a9fb" />
+
+- Chạy lại Nodered bằng cmd, vào thư mục ```D:\nodejs\nodered``` và chạy lệnh ```nssm restart a1-nodered```:
+<img width="1797" height="186" alt="image" src="https://github.com/user-attachments/assets/ed46e498-b606-45e4-aca3-b871bbb74a4a" />
+
+- Sau khi chạy lệnh thành công, Notedred sẽ yêu cầu mật khẩu mới khi đăng nhập:
+<img width="3064" height="1750" alt="image" src="https://github.com/user-attachments/assets/2545225c-060c-4551-8cef-778ff93a7036" />
+### 2.5. Tạo API backend bằng Notered
+
+
 
