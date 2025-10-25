@@ -208,6 +208,7 @@ node-red-contrib-cron-plus
 
 - Sau khi chạy lệnh thành công, Notedred sẽ yêu cầu mật khẩu mới khi đăng nhập:
 <img width="3064" height="1750" alt="image" src="https://github.com/user-attachments/assets/2545225c-060c-4551-8cef-778ff93a7036" />
+
 ### 2.5. Tạo API backend bằng Notered
 
 
