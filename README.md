@@ -195,3 +195,7 @@ node-red-contrib-duckdns
 node-red-contrib-cron-plus
 ```
 <img width="1407" height="1500" alt="image" src="https://github.com/user-attachments/assets/abafc95e-e6a0-4887-9203-ecdcb1e7fe69" />
+
+- Mở file cấu hình: ```D:\nodejs\nodered\work\settings.js```
+- Tìm phần adminAuth, uncomment (bỏ #) và sửa thành:
+- 
