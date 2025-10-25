@@ -134,3 +134,19 @@ Mở CMD quyền Administrator sau đó gõ lệnh:
 
 <img width="1798" height="110" alt="image" src="https://github.com/user-attachments/assets/326ca30f-bd57-4df6-b4b0-c9b28dad287a" />
 <img width="1808" height="44" alt="image" src="https://github.com/user-attachments/assets/b293be4f-146b-4ce5-bbfe-03d286740656" />
+
+#### Kết quả sau khi chạy Apache:
+<img width="3071" height="1817" alt="image" src="https://github.com/user-attachments/assets/10237f7b-274d-4b10-9ac1-e35e47ec8da2" />
+
+### 2.2. Cài đặt Nodejs và Nodered.
+#### Bước 1: Cài đặt Nodejs
+- download file `https://nodejs.org/dist/v20.19.5/node-v20.19.5-x64.msi`
+- cài đặt vào thư mục `D:\nodejs`
+#### Bước 2: Cài đặt Nodered
+Mở cmd, vào thư mục D:\nodejs, chạy lệnh npm install -g --unsafe-perm node-red --prefix "D:\nodejs\nodered" để cài đặt Nodered
+<img width="1789" height="280" alt="image" src="https://github.com/user-attachments/assets/3079137d-72d7-4b00-b36f-7a2d7ad7e30c" />
+
+#### Bước 3: Cài đặt NSSM
+- Truy cập link: https://nssm.cc/release/nssm-2.24.zip để tải về.Sau đó giải nén thu được file nssm.exe
+- Copy file nssm.exe vào thư mục D:\nodejs\nodered
+- 
