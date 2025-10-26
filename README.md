@@ -242,8 +242,89 @@ Ví dụ: tìm kiếm sách http://localhost:1880/timkiem?q=Du
 - Cả 3 file này đặt trong thư mục: `D:\Apache\Apache24\nguyentrunghieu`
 <img width="2454" height="1488" alt="image" src="https://github.com/user-attachments/assets/2ce78f33-c133-421c-bef2-484796e9c209" />
 
+- Mã nguồn trong file js:
+```
+const API_URL = 'http://localhost:1880/timkiem';
+
+async function searchBooks() {
+  const query = document.getElementById('searchInput').value.trim();
+  const resultsDiv = document.getElementById('results');
+  
+  // Nếu không có từ khóa → hiển thị toàn bộ sách
+  if (!query) {
+    resultsDiv.innerHTML = '<p class="loading">Đang tải danh sách...</p>';
+  }
+
+
+  try {
+    const response = await fetch(`${API_URL}?q=${encodeURIComponent(query)}`);
+    const books = await response.json();
+
+    if (books.length === 0) {
+      resultsDiv.innerHTML = '<p class="no-result">Không tìm thấy sách nào!</p>';
+      return;
+    }
+
+    resultsDiv.innerHTML = books.map(book => `
+      <div class="book-card">
+        <img src="${book.hinhanhsach || 'https://via.placeholder.com/150'}" alt="${book.tensach}" />
+        <div class="book-info">
+          <h3>${book.tensach}</h3>
+          <p><strong>Tác giả:</strong> ${book.tentacgia}</p>
+          <p><strong>Thể loại:</strong> ${book.loaisach}</p>
+          <p><strong>Nhà xuất bản:</strong> ${book.nhaxuatban}</p>
+          <p><strong>Xuất bản:</strong> ${formatDate(book.namxuatban)}</p>
+          <p><strong>Giá:</strong> <span class="price">${formatPrice(book.giatien)}</span></p>
+          <p><strong>Số trang:</strong> ${book.sotrang} trang</p>
+          <p class="description">${book.mota}</p>
+        </div>
+      </div>
+    `).join('');
+
+  } catch (error) {
+    resultsDiv.innerHTML = `<p class="error">Lỗi kết nối: ${error.message}</p>`;
+  }
+}
+
+function formatPrice(price) {
+  return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(price);
+}
+
+function formatDate(dateString) {
+  if (!dateString) return 'Không rõ';
+  
+  const date = new Date(dateString);
+  
+  // Kiểm tra ngày hợp lệ
+  if (isNaN(date.getTime())) return 'Không rõ';
+  
+  const day = String(date.getDate()).padStart(2, '0');
+  const month = String(date.getMonth() + 1).padStart(2, '0'); // Tháng bắt đầu từ 0
+  const year = date.getFullYear();
+  
+  return `${day}/${month}/${year}`;
+}
+// Tìm kiếm khi nhấn Enter
+document.getElementById('searchInput').addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') searchBooks();
+});
+
+// Tự động tải tất cả sách khi mở trang
+window.addEventListener('load', () => {
+  document.getElementById('searchInput').value = '';
+  searchBooks(); // Gọi hàm tìm kiếm với query rỗng
+});
+
+// Tìm kiếm live (sau 500ms)
+let timeout;
+document.getElementById('searchInput').addEventListener('input', function() {
+  clearTimeout(timeout);
+  timeout = setTimeout(searchBooks, 500);
+});
+```
 #### Sau khi nhập url nguyentrunghieu.com, kết quả nhận được:
 <img width="3071" height="1822" alt="image" src="https://github.com/user-attachments/assets/3bb6fff6-82eb-44a6-a285-2c040f982336" />
+
 #### Tìm kiếm từ khóa theo tên sách hoặc tên tác giả:
 <img width="3071" height="1817" alt="image" src="https://github.com/user-attachments/assets/fcebc958-9531-42e8-a523-9142cde55797" />
 <img width="3071" height="1814" alt="image" src="https://github.com/user-attachments/assets/68438652-f029-4a52-b70e-fb054bb0f1c9" />
