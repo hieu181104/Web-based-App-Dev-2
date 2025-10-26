@@ -218,7 +218,7 @@ node-red-contrib-cron-plus
 <img width="1019" height="563" alt="image" src="https://github.com/user-attachments/assets/e04ebb66-650d-44fe-abd9-b13e1bbf626a" />
 
 #### Bước 2: Thêm node function : tiền xử lý dữ liệu
-<img width="1280" height="921" alt="image" src="https://github.com/user-attachments/assets/b3329bda-ab51-4a23-b6a0-a64005f7a79d" />
+<img width="1284" height="774" alt="image" src="https://github.com/user-attachments/assets/9b4e720a-e0af-401f-b53a-5e5f30124147" />
 
 #### Bước 3: Thêm node MSSQL để truy vấn tới CSDL và nhận tham số từ node Function
 <img width="1019" height="825" alt="image" src="https://github.com/user-attachments/assets/5096108b-f8ca-4bbe-ac51-611b963904fb" />
@@ -230,5 +230,9 @@ node-red-contrib-cron-plus
 #### Bước 5: Thêm node debug để quan sát giá trị trung gian
 <img width="1022" height="663" alt="image" src="https://github.com/user-attachments/assets/24d1c338-3cdc-4ef3-9b69-3265ece53987" />
 
+#### Kết quả:
+<img width="1497" height="261" alt="image" src="https://github.com/user-attachments/assets/f206aaa0-d03f-4fff-b921-0cb6be272739" />
+
 #### Test API tìm kiếm sách
-Ví dụ: tìm kiếm sách http://localhost:1880/timkiem?q=du
+Ví dụ: tìm kiếm sách http://localhost:1880/timkiem?q=Du
+<img width="3071" height="1740" alt="image" src="https://github.com/user-attachments/assets/7b4f0f2b-ce46-4c7a-b3c2-0603420c83b1" />
