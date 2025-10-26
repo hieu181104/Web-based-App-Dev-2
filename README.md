@@ -210,6 +210,25 @@ node-red-contrib-cron-plus
 <img width="3064" height="1750" alt="image" src="https://github.com/user-attachments/assets/2545225c-060c-4551-8cef-778ff93a7036" />
 
 ### 2.5. Tạo API backend bằng Notered
+#### Tạo API tìm kiếm sách nhận tham số từ url trả về json
+- Trên Nodered, ở flow 1 sử dụng `http in` và `http response` để tạo api
+- Thêm node MSSQL để kết nối và truy vấn tới cơ sở dữ liệu
+- Logic Flow sẽ gồm 4 node sau (thứ tự nối dây):
+#### Bước 1: Thêm node http in: dùng GET, URL đặt tùy ý (/timkiem)
+<img width="1019" height="563" alt="image" src="https://github.com/user-attachments/assets/e04ebb66-650d-44fe-abd9-b13e1bbf626a" />
 
+#### Bước 2: Thêm node function : tiền xử lý dữ liệu
+<img width="1280" height="921" alt="image" src="https://github.com/user-attachments/assets/b3329bda-ab51-4a23-b6a0-a64005f7a79d" />
 
+#### Bước 3: Thêm node MSSQL để truy vấn tới CSDL và nhận tham số từ node Function
+<img width="1019" height="825" alt="image" src="https://github.com/user-attachments/assets/5096108b-f8ca-4bbe-ac51-611b963904fb" />
+<img width="1007" height="1427" alt="image" src="https://github.com/user-attachments/assets/9f82da87-b379-4e76-9347-9dd8082149f0" />
 
+#### Bước 4: Thêm node http response: để phản hồi dữ liệu tới client. 
+<img width="1027" height="677" alt="image" src="https://github.com/user-attachments/assets/c7084fd5-0760-4a67-9ccb-4598675b6463" />
+
+#### Bước 5: Thêm node debug để quan sát giá trị trung gian
+<img width="1022" height="663" alt="image" src="https://github.com/user-attachments/assets/24d1c338-3cdc-4ef3-9b69-3265ece53987" />
+
+#### Test API tìm kiếm sách
+Ví dụ: tìm kiếm sách http://localhost:1880/timkiem?q=du
