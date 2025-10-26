@@ -236,3 +236,16 @@ node-red-contrib-cron-plus
 #### Test API tìm kiếm sách
 Ví dụ: tìm kiếm sách http://localhost:1880/timkiem?q=Du
 <img width="3071" height="1740" alt="image" src="https://github.com/user-attachments/assets/7b4f0f2b-ce46-4c7a-b3c2-0603420c83b1" />
+
+### 2.6. Tạo giao diện Frontend
+- Html form gồm các file : `index.html`, `nguyentrunghieu.js`, `nguyentrunghieu.css`
+- Cả 3 file này đặt trong thư mục: `D:\Apache\Apache24\nguyentrunghieu`
+<img width="2454" height="1488" alt="image" src="https://github.com/user-attachments/assets/2ce78f33-c133-421c-bef2-484796e9c209" />
+
+#### Sau khi nhập url nguyentrunghieu.com, kết quả nhận được:
+<img width="3071" height="1822" alt="image" src="https://github.com/user-attachments/assets/3bb6fff6-82eb-44a6-a285-2c040f982336" />
+#### Tìm kiếm từ khóa theo tên sách hoặc tên tác giả:
+<img width="3071" height="1817" alt="image" src="https://github.com/user-attachments/assets/fcebc958-9531-42e8-a523-9142cde55797" />
+<img width="3071" height="1814" alt="image" src="https://github.com/user-attachments/assets/68438652-f029-4a52-b70e-fb054bb0f1c9" />
+
+### 2.7. Nhận xét bài làm
